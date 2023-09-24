@@ -1,6 +1,11 @@
 import fs from "fs";
+import path from "path";
+import * as url from "url";
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
-const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
+const data = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "data.json"), "utf-8")
+);
 const users = data.users;
 
 const createUser = (req, res) => {
@@ -42,11 +47,4 @@ const deleteuser = (req, res) => {
   res.status(201).json(user);
 };
 
-export {
-  createUser,
-  getAllUsers,
-  getUser,
-  replaceUser,
-  patchuser,
-  deleteuser,
-};
+export { createUser, getAllUsers, getUser, replaceUser, patchuser, deleteuser };
