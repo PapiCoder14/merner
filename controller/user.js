@@ -4,7 +4,7 @@ import * as url from "url";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 const data = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "data.json"), "utf-8")
+  fs.readFileSync(path.resolve(__dirname, "../data.json"), "utf-8")
 );
 const users = data.users;
 
