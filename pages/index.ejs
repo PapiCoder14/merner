@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <style>
+      /* Style for the product card container */
+      .container {
+        margin-top: 20px;
+      }
+
+      /* Style for the product card */
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 100%;
+        max-width: 300px; /* Adjust the max width as needed */
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Style for the image container */
+      .image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Style for the discount label */
+      .discount {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: #e74c3c;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      /* Style for the heart icon (wishlist) */
+      .wishlist {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 20px;
+        color: #e74c3c;
+        cursor: pointer;
+      }
+
+      /* Style for the product image */
+      .card-img-top {
+        max-height: 200px;
+        object-fit: cover; /* Preserve aspect ratio and cover container */
+        width: 100%;
+      }
+
+      /* Style for the product title */
+      .card-title {
+        font-size: 18px;
+        margin: 10px;
+        color: #333;
+      }
+
+      /* Style for the product price */
+      .card-text .price {
+        font-size: 16px;
+        margin: 0 10px;
+        color: #e74c3c;
+      }
+
+      /* Style for the product rating */
+      .card-text .rating {
+        font-size: 14px;
+        margin: 0 10px;
+        color: #666;
+      }
+
+      /* Style for the "Add to Cart" button */
+      .btn-primary {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 10px;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .btn-delete {
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 10px;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+      /* Hover effect for the product card */
+      .card:hover {
+        transform: scale(1.05); /* Increase size on hover */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="image-container">
+              <div class="first">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="discount">-X%</span>
+                  <span class="wishlist">
+                    <i class="fa fa-heart-o"></i>
+                  </span>
+                </div>
+              </div>
+              <img src="" alt="Product Image" class="card-img-top" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Product Title</h5>
+              <p class="card-text">
+                Price: $X.XX<br />
+                Rating: X.X
+              </p>
+              <button class="btn btn-primary">Add to Cart</button>
+              <button class="btn btn-delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
